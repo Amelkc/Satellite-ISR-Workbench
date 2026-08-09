@@ -1,0 +1,20 @@
+paths: #sub-set of samples
+  images_dir: "data/raw/images" 
+  labels_dir: "data/raw/labelTxt"
+  out_images_dir: "data/interim/images"
+  out_labels_dir: "data/interim/labels"
+
+tiling:
+  tile_size: 1024
+  overlap: 200          # pixels of overlap between adjacent tiles
+  drop_empty_tiles: true
+  min_object_area_px: 20       # drop fragments smaller than this (in pixels^2)
+  min_visible_ratio: 0.20      # drop fragments if less than 20% of original area survives clipping
+
+image:
+  extensions: [".png"]
+
+output:
+  image_format: "png"
+  save_visual_debug: false
+  debug_dir: "assets/figures/tiling_debug"
