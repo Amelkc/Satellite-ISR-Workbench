@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 # The template matches the official DOTA line format of 8 coordinates + category + difficult flag.
 load_dotenv()
 
-LABEL_DIR=os.getenv('ANOT_TRAIN')
+LABEL_DIR=os.getenv('ANNOT_TRAIN')
 
 
 @dataclass
@@ -96,7 +96,6 @@ def parse_dota_label_dir(label_dir: str | Path) -> Dict[str, List[DotaObj]]:
     parsed: Dict[str, List[DotaObj]] = {}
 
     for txt_file in sorted(label_dir.glob("[!._]*.txt")): #avoid macos hidden files
-        print(txt_file)
         parsed[txt_file.stem] = parse_dota_label_file(txt_file)
 
     return parsed

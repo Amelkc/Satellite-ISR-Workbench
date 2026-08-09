@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from src.preprocessing.visualize_dota import visualize_single
 load_dotenv()
 
-LABEL_DIR=os.getenv('ANOT_TRAIN')
+LABEL_DIR=os.getenv('ANNOT_TRAIN')
 IMG_DIR=os.getenv('TRAIN_DIR')
 
 def main():

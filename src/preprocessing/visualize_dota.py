@@ -11,7 +11,7 @@ from dotenv import load_dotenv
 from src.preprocessing.parse_dota import DotaObj, parse_dota_label_file
 load_dotenv()
 
-LABEL_DIR=os.getenv('ANOT_TRAIN')
+LABEL_DIR=os.getenv('ANNOT_TRAIN')
 IMG_DIR=os.getenv('TRAIN_DIR')
 
 DEFAULT_COLORS = {
