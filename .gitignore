@@ -1,3 +1,7 @@
 .env
 .vscode
 __pycache__
+data/interim/images/*.png
+data/interim/labels/*.txt
+data/raw/images/*.png
+data/raw/labelTxt/*.txt
